@@ -28,10 +28,10 @@ int main(int argc,char* argv[]){
   MPI_Reduce(&local, &minGlobal, 1, MPI_INT, MPI_MIN, 0, MPI_COMM_WORLD);
 
   if (idProc == 0){
-    printf("La sumatoria es:  %d\n", sumatoria);
-    printf("El producto global es: %d\n",prodGlobal);
-    printf("El maximo es:  %d\n", maxGlobal);
-    printf("El minimo es:  %d\n", minGlobal);
+    printf("La Sumatoria es:  %d\n", sumatoria);
+    printf("El Producto global es: %d\n",prodGlobal);
+    printf("El Maximo es:  %d\n", maxGlobal);
+    printf("El Minimo es:  %d\n", minGlobal);
   }
 
 
