@@ -30,8 +30,8 @@ int main(int argc,char* argv[]){
   if (idProc == 0){
     printf("La sumatoria es:  %d\n", sumatoria);
     printf("El producto global es: %d\n",prodGlobal);
-    printf("El maximo es:  %d\n", maxGlobal);
-    printf("El minimo es:  %d\n", minGlobal);
+    printf("El maximo es:   %d\n", maxGlobal);
+    printf("El minimo es:   %d\n", minGlobal);
   }
 
 
