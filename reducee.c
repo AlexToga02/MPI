@@ -23,7 +23,7 @@ int main(int argc,char* argv[]){
 
 
   MPI_Reduce(&local_sum, &global_sum,1,MPI_INT,
-  MPI_COMM_WORLD);
+  MPI_SUM,0,MPI_COMM_WORLD);
 
   if (idProc == 0)
     printf("La suma es:  %d\n", global_sum);

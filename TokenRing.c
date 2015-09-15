@@ -28,7 +28,7 @@ int main(int argc,char* argv[]){
   MPI_Comm_rank (MPI_COMM_WORLD, &idProc);
   MPI_Comm_size (MPI_COMM_WORLD, &numProc);
 
-//Proceso 0  envia al proceso 1 y recive del proceso 9 
+//Proceso 0  envia al proceso 1 y recive del proceso 9
 if(idProc == 0){
 
   while(i<=numero){
@@ -206,43 +206,7 @@ if(idProc == 2){
             printf("\n");
           }
         }
-/*
-  if(idProc == 0){
-    while(i<10){
-      tI = MPI_Wtime();
-      dato = 100;
-      MPI_Send(&dato,1, MPI_INT,1, 200,MPI_COMM_WORLD);
-      printf("Soy el proceso: %d envio dato:  %d al proceso 1 \n",idProc,dato );
 
-      MPI_Recv(&dato,1, MPI_INT,1, 200,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
-      printf("Soy el proceso: %d recivi dato:  %d del  proceso 0 \n",idProc,dato );
-
-      tF= MPI_Wtime();
-      printf("El tiempo que duro la comunicacion es: %e\n",tF-tI );
-
-      i=i+1;
-      }
-
-
-  }
-
-//Proceso 1 que va a recibir los datos
-  if(idProc == 1){
-    while(i<10){
-      tI = MPI_Wtime();
-      MPI_Recv(&dato,1, MPI_INT,0, 200,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
-      printf("Soy el proceso: %d recivo el dato: %d  del  proceso 0 \n",idProc,dato);
-      dato = dato *20;
-      MPI_Send(&dato,1, MPI_INT,0, 200,MPI_COMM_WORLD);
-      printf("Soy el proceso: %d envio dato:  %d al proceso 1 \n",idProc,dato );
-      tF= MPI_Wtime();
-      printf("El tiempo que duro la comunicacion es: %e\n",tF-tI );
-
-      i=i+1;
-      }
-
-  }
-*/
 
   MPI_Finalize();
 
